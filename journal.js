@@ -10,7 +10,7 @@ let listOfEntry = [// An array of ojects which stores the journals
 ];
 
 function startMenu() {// Home page asking for what activity they want to do
-    let homePage = Number(prompt("Welcome to my journal program! \nChoose 1 to show the entry list \nChoose 2 to add a new entry \nChoose 3 to quit \nChoose 4 to delete the last entry"));
+    let homePage = Number(prompt("Welcome to my journal program! \nChoose 1 to show the entry list \nChoose 2 to add a new entry \nChoose 3 to quit \nChoose 4 to delete the last entry \nChoose 5 to delete a specific entry"));
         if(homePage === 1) {
         showList()
         } else if(homePage === 2) {
@@ -18,6 +18,8 @@ function startMenu() {// Home page asking for what activity they want to do
         } else if(homePage === 4) {
             listOfEntry.pop();
             startMenu();
+        } else if (homePage === 5){
+            deleteASpecific();
         } else {
             alert("Thank you");
         }
@@ -35,6 +37,12 @@ function addingNewJournal() {// prompt for the title and content
     let  content = prompt("Type here the content");
     let newJournal = {title, content}; // new array to add into the list
     listOfEntry.push(newJournal);// adding the new array to the journal list
+    startMenu();
+}
+
+function deleteASpecific() {
+    let indexToDelete = Number(prompt("What journal do you want to delete? set a number"));
+    listOfEntry.splice((indexToDelete - 1), 1);
     startMenu();
 }
 
