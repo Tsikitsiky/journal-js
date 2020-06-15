@@ -2,10 +2,10 @@ console.log('it works');
 let listOfEntry = [// An array of oject which stores the journals
     { title: "First",
      content: "My first journal is this sentence."
-},
+    },
      {title:"Second",
      content:"It is the test day."
-}
+    }
 ];
 
 function startMenu() {
