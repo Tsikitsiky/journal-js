@@ -1,5 +1,6 @@
 console.log('it works');
-let listOfEntry = [// An array of oject which stores the journals
+
+let listOfEntry = [// An array of ojects which stores the journals
     { title: "First",
      content: "My first journal is this sentence."
     },
@@ -8,8 +9,8 @@ let listOfEntry = [// An array of oject which stores the journals
     }
 ];
 
-function startMenu() {
-    let homePage = Number(prompt("Welcome to my journal program! \nChoose 1 to show the entry list \nChoose 2 to add a new entry \nChoose 3 to quit \nChoose 4 to delete the last entry"));// Home page asking for what activithy they want to do
+function startMenu() {// Home page asking for what activity they want to do
+    let homePage = Number(prompt("Welcome to my journal program! \nChoose 1 to show the entry list \nChoose 2 to add a new entry \nChoose 3 to quit \nChoose 4 to delete the last entry"));
         if(homePage === 1) {
         showList()
         } else if(homePage === 2) {
